@@ -43,11 +43,10 @@ proxy-groups:
       - 🇨🇭 直连 | 瑞士
       - 🇦🇪 安徽 | 阿联酋 Oracle
       - 🇦🇪 直连 | 阿联酋 Oracle
- - name: ♻️ 自动选择
+- name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50
     proxies:
       - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
