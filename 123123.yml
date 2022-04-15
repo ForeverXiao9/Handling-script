@@ -22,11 +22,11 @@ proxies:
   - {name: 🇦🇪 安徽 | 阿联酋 Oracle, server: ah.jiyunshu.com, port: 61352, type: vmess, uuid: d7e35f5d-2de8-415e-b1af-2864af5933c2, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: ah.jiyunshu.com}}
   - {name: 🇦🇪 直连 | 阿联酋 Oracle, server: 193.123.95.114, port: 21999, type: vmess, uuid: d7e35f5d-2de8-415e-b1af-2864af5933c2, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 193.123.95.114}}
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - DIRECT
+      - 🎯 全球直连     
       - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
       - 🇭🇰 AIA | 香港 | 6x
@@ -43,7 +43,7 @@ proxy-groups:
       - 🇨🇭 直连 | 瑞士
       - 🇦🇪 安徽 | 阿联酋 Oracle
       - 🇦🇪 直连 | 阿联酋 Oracle
-- name: ♻️ 自动选择
+  - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -64,13 +64,38 @@ proxy-groups:
       - 🇨🇭 直连 | 瑞士
       - 🇦🇪 安徽 | 阿联酋 Oracle
       - 🇦🇪 直连 | 阿联酋 Oracle
-
   - name: 🌍 国外媒体
     type: select
     proxies:
-      - 🚀 节点选择
+      - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇲🇴 直连 | 澳门 CTM
+      - 🇲🇴 广州 | 澳门 CTM
+      - 🇭🇰 AIA | 香港 | 6x
+      - 🇭🇰 IPLC | 香港 DMIT | 5x
+      - 🇭🇰 IPLC | 香港 Tencent 30M
+      - 🇭🇰 直连 | 香港 Azure | 负载均衡
+      - 🇭🇰 直连 | 香港 Alibaba
+      - 🇰🇷 直连 | 韩国 春川 Oracle
+      - 🇰🇷 长沙 | 韩国 春川 Oracle
+      - 🇯🇵 直连 | 日本 Azure
+      - 🇲🇾 直连 | 马来西亚 TM
+      - 🇿🇦 直连 | 南非
+      - 🇱🇺 直连 | 卢森堡 | BT下载 0x
+      - 🇨🇭 直连 | 瑞士
+      - 🇦🇪 安徽 | 阿联酋 Oracle
+      - 🇦🇪 直连 | 阿联酋 Oracle
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
       - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
       - 🇭🇰 AIA | 香港 | 6x
@@ -90,30 +115,9 @@ proxy-groups:
   - name: 📲 电报信息
     type: select
     proxies:
-      - 🚀 节点选择
+      - 🔰 节点选择
       - 🎯 全球直连
-     - 🇲🇴 直连 | 澳门 CTM
-      - 🇲🇴 广州 | 澳门 CTM
-      - 🇭🇰 AIA | 香港 | 6x
-      - 🇭🇰 IPLC | 香港 DMIT | 5x
-      - 🇭🇰 IPLC | 香港 Tencent 30M
-      - 🇭🇰 直连 | 香港 Azure | 负载均衡
-      - 🇭🇰 直连 | 香港 Alibaba
-      - 🇰🇷 直连 | 韩国 春川 Oracle
-      - 🇰🇷 长沙 | 韩国 春川 Oracle
-      - 🇯🇵 直连 | 日本 Azure
-      - 🇲🇾 直连 | 马来西亚 TM
-      - 🇿🇦 直连 | 南非
-      - 🇱🇺 直连 | 卢森堡 | BT下载 0x
-      - 🇨🇭 直连 | 瑞士
-      - 🇦🇪 安徽 | 阿联酋 Oracle
-      - 🇦🇪 直连 | 阿联酋 Oracle
- - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-    - 🇲🇴 直连 | 澳门 CTM
+      - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
       - 🇭🇰 AIA | 香港 | 6x
       - 🇭🇰 IPLC | 香港 DMIT | 5x
@@ -132,9 +136,10 @@ proxy-groups:
   - name: 🍎 苹果服务
     type: select
     proxies:
-      - 🚀 节点选择
+      - 🔰 节点选择
       - 🎯 全球直连
- - 🇲🇴 直连 | 澳门 CTM
+      - ♻️ 自动选择
+      - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
       - 🇭🇰 AIA | 香港 | 6x
       - 🇭🇰 IPLC | 香港 DMIT | 5x
@@ -150,18 +155,11 @@ proxy-groups:
       - 🇨🇭 直连 | 瑞士
       - 🇦🇪 安徽 | 阿联酋 Oracle
       - 🇦🇪 直连 | 阿联酋 Oracle
- - name: 🎯 全球直连
+  - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
   - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
     type: select
     proxies:
       - REJECT
@@ -169,26 +167,10 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🚀 节点选择
+      - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-    - 🇲🇴 直连 | 澳门 CTM
-      - 🇲🇴 广州 | 澳门 CTM
-      - 🇭🇰 AIA | 香港 | 6x
-      - 🇭🇰 IPLC | 香港 DMIT | 5x
-      - 🇭🇰 IPLC | 香港 Tencent 30M
-      - 🇭🇰 直连 | 香港 Azure | 负载均衡
-      - 🇭🇰 直连 | 香港 Alibaba
-      - 🇰🇷 直连 | 韩国 春川 Oracle
-      - 🇰🇷 长沙 | 韩国 春川 Oracle
-      - 🇯🇵 直连 | 日本 Azure
-      - 🇲🇾 直连 | 马来西亚 TM
-      - 🇿🇦 直连 | 南非
-      - 🇱🇺 直连 | 卢森堡 | BT下载 0x
-      - 🇨🇭 直连 | 瑞士
-      - 🇦🇪 安徽 | 阿联酋 Oracle
-      - 🇦🇪 直连 | 阿联酋 Oracle
-    - 🇲🇴 直连 | 澳门 CTM
+      - 🇲🇴 直连 | 澳门 CTM
       - 🇲🇴 广州 | 澳门 CTM
       - 🇭🇰 AIA | 香港 | 6x
       - 🇭🇰 IPLC | 香港 DMIT | 5x
